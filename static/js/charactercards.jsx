@@ -2,7 +2,10 @@
 
 const characterCardData = [
     {
-
+        name: "Abigail",
+        birthday: "Fall 13",
+        imgUrl: "/static/img/Abigail.png",
+        cardId: 1,
     }
 ]
 
@@ -11,7 +14,7 @@ function characterCards(props) {
         <div className="card">
             <h2>Name: {props.name}</h2>
             <img src={props.imgUrl} alt="profile" />
-            <h2>Favorite Item: {props.favitem}</h2>
+            <h2>Birthday: {props.birthday}</h2>
         </div>
     );
 
@@ -19,6 +22,6 @@ function characterCards(props) {
 
 console.log(characterCardData);
 ReactDOM.render(
-    <characterCards name="Abigail" favitem="" imgUrl="" />,
+    <characterCards name="Abigail" birthday="" imgUrl="" />,
     document.querySelector('#Abigail'),
 )
