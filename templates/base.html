@@ -9,17 +9,16 @@
         <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
-        <!-- Include any page-specific JavaScript using this block. -->
-        {% block js %}
-        {% endblock %}
-
         <link href="/static/css/stardew.css" rel="stylesheet">
     </head>
     <body>
         Stardew Valley Character Cards
 
-        {% block body %} 
+        {% block js %}
+        {% endblock %}
 
+
+        {% block body %} 
         {% endblock %}
     </body>
 </html>
