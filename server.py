@@ -55,25 +55,25 @@ CARD_DATA = [
         "name": "Penny",
         "birthday": "Fall 02",
         "imgUrl": "/static/img/Penny.png",
-        "cardId": 8,
+        "cardId": 9,
     },
     {
         "name": "Sam",
         "birthday": "Summer 17",
         "imgUrl": "/static/img/Sam.png",
-        "cardId": 9,
+        "cardId": 10,
     },
     {
         "name": "Sebastian",
         "birthday": "Winter 10",
         "imgUrl": "/static/img/Sebastian.png",
-        "cardId": 10,
+        "cardId": 11,
     },
     {
         "name": "Shane",
         "birthday": "Spring 20",
         "imgUrl": "/static/img/Shane.png",
-        "cardId": 11,
+        "cardId": 12,
     },
 
 ]
@@ -85,17 +85,20 @@ def show_homepage():
 
     return render_template('homepage.html')
 
+
 @app.route('/cards')
 def show_cards():
     """Show all players cards"""
 
     return render_template('cards.html')
 
-@app.route("/cards,json")
+
+@app.route("/cards.json")
 def get_cards_json():
     """Return JSON response with cards"""
 
     return jsonify({"cards": CARD_DATA})
+
 
 @app.route("/add-card", methods=["POST"])
 def add_card():
@@ -112,9 +115,11 @@ def add_card():
     CARD_DATA.append(new_card)
     return jsonify({"success": True, "cardAdded": new_card})
 
+
 @app.route("/cards-no-react")
 def show_cards_no_react():
     return render_template("cards-no-react.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
