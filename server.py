@@ -16,9 +16,9 @@ CARD_DATA = [
         "cardId": 2,
     },
     {
-        "name": "Elliot",
+        "name": "Elliott",
         "birthday": "Fall 05",
-        "imgUrl": "/static/img/Elliot.png",
+        "imgUrl": "/static/img/Elliott.png",
         "cardId": 3,
     },
     {

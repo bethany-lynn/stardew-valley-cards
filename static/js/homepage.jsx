@@ -6,11 +6,11 @@ function Homepage() {
 
         <p>character cards are cool</p>
 
-        <a href="/cards-no-react">
+        {/* <a href="/cards-no-react">
           click here to see character cards with plain JS
         </a>
 
-        <br />
+        <br /> */}
 
         <a href="/cards">
             click here to view cards in React
